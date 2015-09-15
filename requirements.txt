@@ -1,4 +1,4 @@
 Flask==0.10.1
-neoapi==0.1.4
+neoapi==1.0.0
 neomodel==2.0.2
 py2neo==2.0.7

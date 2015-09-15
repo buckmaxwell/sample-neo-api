@@ -3,7 +3,6 @@ __email__ = 'maxbuckdeveloper@gmail.com'
 __version__ = '1.0.0'
 
 from neomodel import (StringProperty, AliasProperty, RelationshipTo, Relationship, ZeroOrOne)
-#from serializable_structured_node import SerializableStructuredNode
 from neoapi import SerializableStructuredNode
 
 class User(SerializableStructuredNode):
