@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: neoapi
+Version: 0.1.4
+Summary: A package for serializing json api compliant responses from neomodel StructuredNodes
+Home-page: https://github.com/buckmaxwell/neoapi
+Author: Max Buck
+Author-email: maxbuckdeveloper@gmail.com
+License: MIT
+Keywords: json api specification neomodel neo4j
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Requires-Dist: neomodel
+Requires-Dist: py2neo
+Requires-Dist: flask
+
+UNKNOWN
+
+

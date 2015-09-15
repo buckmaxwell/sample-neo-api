@@ -1,0 +1,4 @@
+Flask==0.10.1
+neoapi==0.1.4
+neomodel==2.0.2
+py2neo==2.0.7
