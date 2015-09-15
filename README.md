@@ -11,7 +11,7 @@ NOTE: Before you test drive this sample API you'll have to get started by instal
 $ neo4j start
 $ export NEO4J_REST_URL=http://<u>:<p>@localhost:7474/db/data
 $ # set to location of neo4j instance
-$ export BASE_API_URL=http://localhost:10200
+$ export BASE_API_URL=http://localhost:10200/v1
 $ # This will prefix the endpoints of your api
 $ # If it is incorrect, links returned by th api will not work.
 $ # NOTE: This is the best place to add a version number ie. /v1
@@ -57,7 +57,7 @@ Response:
 ```http
 Content-Type: application/vnd.api+json; charset=utf-8 
 Content-Length: 992 
-Location: http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com 
+Location: http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com 
 Date: Tue, 15 Sep 2015 04:31:28 GMT 
 ```
 
@@ -77,22 +77,22 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 				"friends": {
 					"data": [], 
 					"links": {
-						"related": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/friends", 
-						"self": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/relationships/friends"
+						"related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/friends", 
+						"self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/friends"
 					}
 				}, 
 				"mom": {
 				"data": null, 
 				"links": {
-				  "related": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/mom", 
-				  "self": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/relationships/mom"
+				  "related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/mom", 
+				  "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/mom"
 				}
 				}
 				}, 
 			"type": "users"
 			}, 
 	  "links": {
-	    "self": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com"
+	    "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com"
 	  }
 	}
 ```
@@ -135,7 +135,7 @@ Response:
 ```http
 Content-Type: application/vnd.api+json; charset=utf-8 
 Content-Length: 992 
-Location: http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com 
+Location: http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com 
 Date: Tue, 15 Sep 2015 04:31:28 GMT 
 ```
 
@@ -164,8 +164,8 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		          }
 		        ], 
 		        "links": {
-		          "related": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/friends", 
-		          "self": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/relationships/friends"
+		          "related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/friends", 
+		          "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/friends"
 		        }
 		      }, 
 		      "mom": {
@@ -174,15 +174,15 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		          "type": "users"
 		        }, 
 		        "links": {
-		          "related": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/mom", 
-		          "self": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com/relationships/mom"
+		          "related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/mom", 
+		          "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/mom"
 		        }
 		      }
 		    }, 
 		    "type": "users"
 		  }, 
 		  "links": {
-		    "self": "http://localhost:5000/v1/users/maxbuckdeveloper@gmail.com"
+		    "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com"
 		  }
 		}
 ```
@@ -242,15 +242,15 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		          }
 		        ], 
 		        "links": {
-		          "related": "http://localhost:5000/v1/users/billgates@apple.com/friends", 
-		          "self": "http://localhost:5000/v1/users/billgates@apple.com/relationships/friends"
+		          "related": "http://localhost:10200/v1/users/billgates@apple.com/friends", 
+		          "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/friends"
 		        }
 		      }, 
 		      "mom": {
 		        "data": null, 
 		        "links": {
-		          "related": "http://localhost:5000/v1/users/billgates@apple.com/mom", 
-		          "self": "http://localhost:5000/v1/users/billgates@apple.com/relationships/mom"
+		          "related": "http://localhost:10200/v1/users/billgates@apple.com/mom", 
+		          "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/mom"
 		        }
 		      }
 		    }, 
@@ -276,15 +276,15 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		            }
 		          ], 
 		          "links": {
-		            "related": "http://localhost:5000/v1/users/stevewozniak@mictosoft.com/friends", 
-		            "self": "http://localhost:5000/v1/users/stevewozniak@mictosoft.com/relationships/friends"
+		            "related": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/friends", 
+		            "self": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/relationships/friends"
 		          }
 		        }, 
 		        "mom": {
 		          "data": null, 
 		          "links": {
-		            "related": "http://localhost:5000/v1/users/stevewozniak@mictosoft.com/mom", 
-		            "self": "http://localhost:5000/v1/users/stevewozniak@mictosoft.com/relationships/mom"
+		            "related": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/mom", 
+		            "self": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/relationships/mom"
 		          }
 		        }
 		      }, 
@@ -292,7 +292,7 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		    }
 		  ], 
 		  "links": {
-		    "self": "http://localhost:5000/v1/users/billgates@apple.com"
+		    "self": "http://localhost:10200/v1/users/billgates@apple.com"
 		  }
 		}
 ```
@@ -330,15 +330,15 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		        "friends": {
 		          "data": [], 
 		          "links": {
-		            "related": "http://localhost:5000/v1/users/billgates@apple.com/friends", 
-		            "self": "http://localhost:5000/v1/users/billgates@apple.com/relationships/friends"
+		            "related": "http://localhost:10200/v1/users/billgates@apple.com/friends", 
+		            "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/friends"
 		          }
 		        }, 
 		        "mom": {
 		          "data": null, 
 		          "links": {
-		            "related": "http://localhost:5000/v1/users/billgates@apple.com/mom", 
-		            "self": "http://localhost:5000/v1/users/billgates@apple.com/relationships/mom"
+		            "related": "http://localhost:10200/v1/users/billgates@apple.com/mom", 
+		            "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/mom"
 		          }
 		        }
 		      }, 
@@ -346,10 +346,10 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 		    }
 		  ], 
 		  "links": {
-		    "first": "http://localhost:5000/v1/users?page[offset]=0&page[limit]=1", 
-		    "last": "http://localhost:5000/v1/users?page[offset]=6&page[limit]=1", 
-		    "next": "http://localhost:5000/v1/users?page[offset]=1&page[limit]=1", 
-		    "self": "http://localhost:5000/v1/users?page[offset]=0&page[limit]=1"
+		    "first": "http://localhost:10200/v1/users?page[offset]=0&page[limit]=1", 
+		    "last": "http://localhost:10200/v1/users?page[offset]=6&page[limit]=1", 
+		    "next": "http://localhost:10200/v1/users?page[offset]=1&page[limit]=1", 
+		    "self": "http://localhost:10200/v1/users?page[offset]=0&page[limit]=1"
 		  }
 		}
 ```

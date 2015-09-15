@@ -7,15 +7,15 @@ import application_codes
 app = Flask(__name__)
 url = os.environ.get("NEO4J_REST_URL")
 
-
 @app.route('/', methods=['GET'])
+@app.route('/v1', methods=['GET'])
 def index():
     """ Call this method for basic version info or to ensure the api is running. """
     return 'Your api is up and running!'
 
 
-@app.route('/users/<id>', methods=['GET', 'PATCH', 'DELETE'])
-@app.route('/users', defaults={'id': None}, methods=['POST', 'GET'])
+@app.route('/v1/users/<id>', methods=['GET', 'PATCH', 'DELETE'])
+@app.route('/v1/users', defaults={'id': None}, methods=['POST', 'GET'])
 def user(id):
     """Methods directly Related to the user resource"""
     response = None
@@ -30,8 +30,8 @@ def user(id):
     return response
 
 
-@app.route('/users/<id>/relationships/<related_collection_name>/<related_resource>', methods=['GET', 'DELETE'])
-@app.route('/users/<id>/relationships/<related_collection_name>', defaults={'related_resource': None}, methods=['GET', 'DELETE'])
+@app.route('/v1/users/<id>/relationships/<related_collection_name>/<related_resource>', methods=['GET', 'DELETE'])
+@app.route('/v1/users/<id>/relationships/<related_collection_name>', defaults={'related_resource': None}, methods=['GET', 'DELETE'])
 def user_relationships(id, related_collection_name, related_resource):
     """Methods related to user relationships"""
     response = None
@@ -42,8 +42,8 @@ def user_relationships(id, related_collection_name, related_resource):
     return response
 
 
-@app.route('/users/<id>/<related_collection_name>/<related_resource>', methods=['GET', 'DELETE'])
-@app.route('/users/<id>/<related_collection_name>', defaults={'related_resource': None}, methods=['GET', 'DELETE'])
+@app.route('/v1/users/<id>/<related_collection_name>/<related_resource>', methods=['GET', 'DELETE'])
+@app.route('/v1/users/<id>/<related_collection_name>', defaults={'related_resource': None}, methods=['GET', 'DELETE'])
 def user_related_resources(id, related_collection_name, related_resource):
     """Methods that return resources related to the user resource"""
     response = None
