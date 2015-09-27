@@ -375,15 +375,15 @@ Accept: application/vnd.api+json
 
 ```json
 {
-   "data": [
-      {
-         "type": "users",
-         "id": "max@gmail.com",
-         "meta": {
-            "met": "space camp"
-         }
-      }
-   ]
+  "data": [
+    {
+      "type": "users",
+      "id": "max@gmail.com",
+      "meta": {
+        "met": "space camp"
+      }
+    }
+  ]
 }
 ```
 Response:
@@ -443,12 +443,12 @@ Accept: application/vnd.api+json
 
 ```json
 {
-   "data": [
-      {
-         "type": "users",
-         "id": "max@gmail.com"
-      }
-   ]
+  "data": [
+    {
+      "type": "users",
+      "id": "max@gmail.com"
+    }
+  ]
 }
 ```
 
