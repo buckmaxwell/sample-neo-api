@@ -43,22 +43,22 @@ Accept: application/vnd.api+json
 
 ```json
 {
-   "data": {
-      "type": "users",
-      "attributes": {
-         "email": "ryan@gmail.com",
-         "password": "ryan",
-         "gender": "m"
-      },
-      "relationships": {
-         "mom": {
-            "data": {
-               "type": "users",
-               "id": "sarah@gmail.com"
-            }
-         }
-      }
-   }
+  "data": {
+    "type": "users",
+    "attributes": {
+      "email": "ryan@gmail.com",
+      "password": "ryan",
+      "gender": "m"
+    },
+    "relationships": {
+      "mom": {
+        "data": {
+          "type": "users",
+          "id": "sarah@gmail.com"
+        }
+      }
+    }
+  }
 }
 ```
 
