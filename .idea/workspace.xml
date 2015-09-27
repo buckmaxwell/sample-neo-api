@@ -2,39 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a0d459-e136-4994-91a3-a4d980ca7e6b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Procfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/applicationcodes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/artist.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/audioheadserror.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/company.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/constants.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/currentdblayout.pages" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/currentdblayout.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/customerrorcodes.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/event.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/goal.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hello.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/httpresponses.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/jsonapi.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/location.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/constants.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/get_token.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/get_user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/get_users.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/make_user_EMAIL_PASSWORD_role.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/make_venue_ID_NAME.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/user_roles.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/venue.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sample_api.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application_codes.py" afterPath="$PROJECT_DIR$/application_codes.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/errors.py" afterPath="$PROJECT_DIR$/errors.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/http_error_codes.py" afterPath="$PROJECT_DIR$/http_error_codes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serializable_structured_node.py" afterPath="$PROJECT_DIR$/serializable_structured_node.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/user.py" afterPath="$PROJECT_DIR$/user.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="audioheads-api.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,39 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="serializable_structured_node.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serializable_structured_node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.290831">
-              <caret line="779" column="25" selection-start-line="779" selection-start-column="23" selection-end-line="779" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#258#0" expanded="true" />
-                <element signature="e#1186#1271#0" expanded="false" />
-                <element signature="e#1327#1394#0" expanded="false" />
-                <element signature="e#13414#17572#0" expanded="false" />
-                <element signature="e#17691#19070#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample_api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.7777777">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="application_codes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application_codes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
               <folding>
                 <element signature="e#0#167#0" expanded="true" />
               </folding>
@@ -110,10 +57,29 @@
         <entry file="file://$PROJECT_DIR$/user.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
               <folding>
                 <element signature="e#88#181#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="MultiMarkdownFxHtmlEditor">
+            <state />
+          </provider>
+          <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+            <state />
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="14.00862">
+              <caret line="650" column="0" selection-start-line="650" selection-start-column="0" selection-end-line="650" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,6 +119,8 @@
         <option value="$PROJECT_DIR$/hello.py" />
         <option value="$PROJECT_DIR$/user.py" />
         <option value="$PROJECT_DIR$/serializable_structured_node.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -190,8 +158,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -206,12 +172,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="serializable-structured-node" />
+              <option name="myItemId" value="sample-neo-api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -487,6 +455,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application_codes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/http_error_codes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <folding>
+            <element signature="e#88#181#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -497,40 +493,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/serializable_structured_node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="499" column="43" selection-start-line="499" selection-start-column="43" selection-end-line="499" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#258#0" expanded="true" />
-            <element signature="e#1186#1271#0" expanded="false" />
-            <element signature="e#1327#1394#0" expanded="false" />
-            <element signature="e#13414#17572#0" expanded="false" />
-            <element signature="e#17691#19070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#88#181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serializable_structured_node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="499" column="43" selection-start-line="499" selection-start-column="43" selection-end-line="499" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#258#0" expanded="true" />
-            <element signature="e#1186#1271#0" expanded="false" />
-            <element signature="e#1327#1394#0" expanded="false" />
-            <element signature="e#13414#17572#0" expanded="false" />
-            <element signature="e#17691#19070#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,10 +561,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.062068965">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application_codes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
           <folding>
             <element signature="e#0#167#0" expanded="true" />
           </folding>
@@ -614,34 +590,27 @@
     <entry file="file://$PROJECT_DIR$/user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding>
             <element signature="e#88#181#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7777777">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MultiMarkdownFxHtmlEditor">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serializable_structured_node.py">
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.290831">
-          <caret line="779" column="25" selection-start-line="779" selection-start-column="23" selection-end-line="779" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#258#0" expanded="true" />
-            <element signature="e#1186#1271#0" expanded="false" />
-            <element signature="e#1327#1394#0" expanded="false" />
-            <element signature="e#13414#17572#0" expanded="false" />
-            <element signature="e#17691#19070#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="14.00862">
+          <caret line="650" column="0" selection-start-line="650" selection-start-column="0" selection-end-line="650" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

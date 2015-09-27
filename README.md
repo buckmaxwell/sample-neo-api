@@ -27,7 +27,12 @@ To give this super fly API a test drive open up [Post Man](https://www.getpostma
 
 ## Example Requests
 
+## Resource Methods
+
 ### POST /users
+
+Add a new resource.
+
 URL: http://localhost:10200/users
 
 Request:
@@ -37,19 +42,24 @@ Accept: application/vnd.api+json
 ```
 
 ```json
-	{
-		"data":
-		{
-		    "type":"users",
-		    "attributes":
-		    {
-		        "email": "maxbuckdeveloper@gmail.com",
-		        "password":"max",
-		        "gender": "m"
-		    }
-		}
-	}
-
+{
+   "data": {
+      "type": "users",
+      "attributes": {
+         "email": "ryan@gmail.com",
+         "password": "ryan",
+         "gender": "m"
+      },
+      "relationships": {
+         "mom": {
+            "data": {
+               "type": "users",
+               "id": "sarah@gmail.com"
+            }
+         }
+      }
+   }
+}
 ```
 
 Response:
@@ -62,44 +72,50 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 ```
 
 ```json
-	{
-		"data": {
-		    "attributes": {
-				"active": true, 
-				"created": "Tue, 15 Sep 2015 00:28:29 GMT", 
-				"email": "maxbuckdeveloper@gmail.com", 
-				"gender": "m", 
-				"id": "maxbuckdeveloper@gmail.com", 
-				"updated": "Tue, 15 Sep 2015 00:28:29 GMT"
-			}, 
-			"id": "maxbuckdeveloper@gmail.com", 
-			"relationships": {
-				"friends": {
-					"data": [], 
-					"links": {
-						"related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/friends", 
-						"self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/friends"
-					}
-				}, 
-				"mom": {
-				"data": null, 
-				"links": {
-				  "related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/mom", 
-				  "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/mom"
-				}
-				}
-				}, 
-			"type": "users"
-			}, 
-	  "links": {
-	    "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com"
-	  }
-	}
+{
+  "data": {
+    "attributes": {
+      "active": true, 
+      "created": "Sun, 27 Sep 2015 16:54:19 GMT", 
+      "email": "ryan@gmail.com", 
+      "gender": "m", 
+      "id": "ryan@gmail.com", 
+      "type": "users", 
+      "updated": "Sun, 27 Sep 2015 16:54:19 GMT"
+    }, 
+    "id": "ryan@gmail.com", 
+    "relationships": {
+      "friends": {
+        "data": [], 
+        "links": {
+          "related": "http://localhost:10200/v1/users/ryan@gmail.com/friends", 
+          "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/friends"
+        }
+      }, 
+      "mom": {
+        "data": {
+          "id": "sarah@gmail.com", 
+          "type": "users"
+        }, 
+        "links": {
+          "related": "http://localhost:10200/v1/users/ryan@gmail.com/mom", 
+          "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/mom"
+        }
+      }
+    }, 
+    "type": "users"
+  }, 
+  "links": {
+    "self": "http://localhost:10200/v1/users/ryan@gmail.com"
+  }
+} 
 ```
 
 ### PATCH /users/< id >
 
-URL: http://localhost:10200/users/maxbuckdeveloper@gmail.com
+Modify an existing resource.
+
+URL: http://localhost:10200/users/ryan@gmail.com
 
 Request:
 
@@ -107,27 +123,14 @@ Request:
 Accept: application/vnd.api+json
 ```
 ```json
-	{
-			"data":
-			{
-			    "type":"users",
-			    "attributes":
-			    {
-			        "password":"MUCHharderPasswordTOGuess"
-			    },
-			    "relationships":
-			    { 
-			          "friends": {
-			              "data":[
-                          	{"type":"users", "id":"billgates@apple.com"}, 								{"type":"users", "id":"stevewozniak@mictosoft.com"}
-                          ]
-			           },
-			           "mom": {
-			               "data": {"type":"users", "id":"christina@gmail.com"}
-			           }
-			    }
-			}
-		}
+{
+   "data": {
+      "type": "users",
+      "attributes": {
+         "password": "muchHarderPasswordToGuess"
+      }
+   }
+}
 ```
 
 Response:
@@ -140,54 +143,48 @@ Date: Tue, 15 Sep 2015 04:31:28 GMT
 ```
 
 ```json
-	{
-		  "data": {
-		    "attributes": {
-		      "active": true, 
-		      "created": "Tue, 15 Sep 2015 00:28:29 GMT", 
-		      "email": "maxbuckdeveloper@gmail.com", 
-		      "gender": "m", 
-		      "id": "maxbuckdeveloper@gmail.com", 
-		      "updated": "Tue, 15 Sep 2015 01:08:09 GMT"
-		    }, 
-		    "id": "maxbuckdeveloper@gmail.com", 
-		    "relationships": {
-		      "friends": {
-		        "data": [
-		          {
-		            "id": "billgates@apple.com", 
-		            "type": "users"
-		          }, 
-		          {
-		            "id": "stevewozniak@mictosoft.com", 
-		            "type": "users"
-		          }
-		        ], 
-		        "links": {
-		          "related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/friends", 
-		          "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/friends"
-		        }
-		      }, 
-		      "mom": {
-		        "data": {
-		          "id": "christina@gmail.com", 
-		          "type": "users"
-		        }, 
-		        "links": {
-		          "related": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/mom", 
-		          "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com/relationships/mom"
-		        }
-		      }
-		    }, 
-		    "type": "users"
-		  }, 
-		  "links": {
-		    "self": "http://localhost:10200/v1/users/maxbuckdeveloper@gmail.com"
-		  }
-		}
+{
+  "data": {
+    "attributes": {
+      "active": true, 
+      "created": "Sun, 27 Sep 2015 16:54:19 GMT", 
+      "email": "ryan@gmail.com", 
+      "gender": "m", 
+      "id": "ryan@gmail.com", 
+      "type": "users", 
+      "updated": "Sun, 27 Sep 2015 17:18:38 GMT"
+    }, 
+    "id": "ryan@gmail.com", 
+    "relationships": {
+      "friends": {
+        "data": [], 
+        "links": {
+          "related": "http://localhost:10200/v1/users/ryan@gmail.com/friends", 
+          "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/friends"
+        }
+      }, 
+      "mom": {
+        "data": {
+          "id": "sarah@gmail.com", 
+          "type": "users"
+        }, 
+        "links": {
+          "related": "http://localhost:10200/v1/users/ryan@gmail.com/mom", 
+          "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/mom"
+        }
+      }
+    }, 
+    "type": "users"
+  }, 
+  "links": {
+    "self": "http://localhost:10200/v1/users/ryan@gmail.com"
+  }
+} 
 ```
 
 ### DELETE /users/< id >
+
+Deactivate an existing resource.
 
 URL: http://localhost:10200/users/maxbuckdeveloper@gmail.com
 
@@ -205,8 +202,13 @@ Content-Length: 0
 Date: Tue, 15 Sep 2015 04:31:28 GMT 
 ```
 
-### GET /users/< id >
-URL: http://localhost:10200/users/billgates@apple.com?include=friends
+### GET /users/\<id>
+
+Fetch an existing resource.
+
+URL: http://localhost:10200/users/ryan@gmail.com?include=mom*
+
+**More info on the **include** parameter can be found [here](http://jsonapi.org/format/#fetching-includes)*
 
 Request:
 
@@ -222,83 +224,83 @@ Content-Length: 1050
 Date: Tue, 15 Sep 2015 04:31:28 GMT 
 ```
 ```json
-	{
-		  "data": {
-		    "attributes": {
-		      "active": true, 
-		      "created": "Tue, 15 Sep 2015 00:28:29 GMT", 
-		      "email": "billgates@apple.com", 
-		      "gender": "m", 
-		      "id": "billgates@apple.com", 
-		      "updated": "Tue, 15 Sep 2015 01:34:08 GMT"
-		    }, 
-		    "id": "billgates@apple.com", 
-		    "relationships": {
-		      "friends": {
-		        "data": [
-		          {
-		            "id": "stevewozniak@mictosoft.com", 
-		            "type": "users"
-		          }
-		        ], 
-		        "links": {
-		          "related": "http://localhost:10200/v1/users/billgates@apple.com/friends", 
-		          "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/friends"
-		        }
-		      }, 
-		      "mom": {
-		        "data": null, 
-		        "links": {
-		          "related": "http://localhost:10200/v1/users/billgates@apple.com/mom", 
-		          "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/mom"
-		        }
-		      }
-		    }, 
-		    "type": "users"
-		  }, 
-		  "included": [
-		    {
-		      "attributes": {
-		        "active": true, 
-		        "created": "Tue, 15 Sep 2015 00:28:29 GMT", 
-		        "email": "stevewozniak@mictosoft.com", 
-		        "gender": "m", 
-		        "id": "stevewozniak@mictosoft.com", 
-		        "updated": "Tue, 15 Sep 2015 00:28:29 GMT"
-		      }, 
-		      "id": "stevewozniak@mictosoft.com", 
-		      "relationships": {
-		        "friends": {
-		          "data": [
-		            {
-		              "id": "billgates@apple.com", 
-		              "type": "users"
-		            }
-		          ], 
-		          "links": {
-		            "related": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/friends", 
-		            "self": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/relationships/friends"
-		          }
-		        }, 
-		        "mom": {
-		          "data": null, 
-		          "links": {
-		            "related": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/mom", 
-		            "self": "http://localhost:10200/v1/users/stevewozniak@mictosoft.com/relationships/mom"
-		          }
-		        }
-		      }, 
-		      "type": "users"
-		    }
-		  ], 
-		  "links": {
-		    "self": "http://localhost:10200/v1/users/billgates@apple.com"
-		  }
-		}
+{
+  "data": {
+    "attributes": {
+      "active": true, 
+      "created": "Sun, 27 Sep 2015 16:54:19 GMT", 
+      "email": "ryan@gmail.com", 
+      "gender": "m", 
+      "id": "ryan@gmail.com", 
+      "type": "users", 
+      "updated": "Sun, 27 Sep 2015 17:18:38 GMT"
+    }, 
+    "id": "ryan@gmail.com", 
+    "relationships": {
+      "friends": {
+        "data": [], 
+        "links": {
+          "related": "http://localhost:10200/v1/users/ryan@gmail.com/friends", 
+          "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/friends"
+        }
+      }, 
+      "mom": {
+        "data": {
+          "id": "sarah@gmail.com", 
+          "type": "users"
+        }, 
+        "links": {
+          "related": "http://localhost:10200/v1/users/ryan@gmail.com/mom", 
+          "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/mom"
+        }
+      }
+    }, 
+    "type": "users"
+  }, 
+  "included": [
+    {
+      "attributes": {
+        "active": true, 
+        "created": "Sun, 27 Sep 2015 16:54:19 GMT", 
+        "email": "sarah@gmail.com", 
+        "gender": "f", 
+        "id": "sarah@gmail.com", 
+        "type": "users", 
+        "updated": "Sun, 27 Sep 2015 16:54:19 GMT"
+      }, 
+      "id": "sarah@gmail.com", 
+      "relationships": {
+        "friends": {
+          "data": [], 
+          "links": {
+            "related": "http://localhost:10200/v1/users/sarah@gmail.com/friends", 
+            "self": "http://localhost:10200/v1/users/sarah@gmail.com/relationships/friends"
+          }
+        }, 
+        "mom": {
+          "data": null, 
+          "links": {
+            "related": "http://localhost:10200/v1/users/sarah@gmail.com/mom", 
+            "self": "http://localhost:10200/v1/users/sarah@gmail.com/relationships/mom"
+          }
+        }
+      }, 
+      "type": "users"
+    }
+  ], 
+  "links": {
+    "self": "http://localhost:10200/v1/users/ryan@gmail.com"
+  }
+}
 ```
 
 ### GET /users
-URL: http://localhost:10200/users?page[offset]=0&page[limit]=1
+
+Fetch a resource collection
+
+URL: http://localhost:10200/users?page[offset]=0&page[limit]=1*
+
+**More info on **pagination** can be found [here](http://jsonapi.org/format/#fetching-pagination)* 
 
 Request:
 
@@ -314,59 +316,110 @@ Content-Length: 1061
 Date: Tue, 15 Sep 2015 04:31:28 GMT 
 ```
 ```json
-	{
-		  "data": [
-		    {
-		      "attributes": {
-		        "active": true, 
-		        "created": "Tue, 15 Sep 2015 00:28:29 GMT", 
-		        "email": "billgates@apple.com", 
-		        "gender": "f", 
-		        "id": "billgates@apple.com", 
-		        "updated": "Tue, 15 Sep 2015 00:28:29 GMT"
-		      }, 
-		      "id": "billgates@apple.com", 
-		      "relationships": {
-		        "friends": {
-		          "data": [], 
-		          "links": {
-		            "related": "http://localhost:10200/v1/users/billgates@apple.com/friends", 
-		            "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/friends"
-		          }
-		        }, 
-		        "mom": {
-		          "data": null, 
-		          "links": {
-		            "related": "http://localhost:10200/v1/users/billgates@apple.com/mom", 
-		            "self": "http://localhost:10200/v1/users/billgates@apple.com/relationships/mom"
-		          }
-		        }
-		      }, 
-		      "type": "users"
-		    }
-		  ], 
-		  "links": {
-		    "first": "http://localhost:10200/v1/users?page[offset]=0&page[limit]=1", 
-		    "last": "http://localhost:10200/v1/users?page[offset]=6&page[limit]=1", 
-		    "next": "http://localhost:10200/v1/users?page[offset]=1&page[limit]=1", 
-		    "self": "http://localhost:10200/v1/users?page[offset]=0&page[limit]=1"
-		  }
-		}
+{
+  "data": [
+    {
+      "attributes": {
+        "active": true, 
+        "created": "Sun, 27 Sep 2015 16:54:19 GMT", 
+        "email": "max@gmail.com", 
+        "gender": "m", 
+        "id": "max@gmail.com", 
+        "type": "users", 
+        "updated": "Sun, 27 Sep 2015 16:54:19 GMT"
+      }, 
+      "id": "max@gmail.com", 
+      "relationships": {
+        "friends": {
+          "data": [], 
+          "links": {
+            "related": "http://localhost:10200/v1/users/max@gmail.com/friends", 
+            "self": "http://localhost:10200/v1/users/max@gmail.com/relationships/friends"
+          }
+        }, 
+        "mom": {
+          "data": null, 
+          "links": {
+            "related": "http://localhost:10200/v1/users/max@gmail.com/mom", 
+            "self": "http://localhost:10200/v1/users/max@gmail.com/relationships/mom"
+          }
+        }
+      }, 
+      "type": "users"
+    }
+  ], 
+  "links": {
+    "first": "http://localhost:10200/v1/users?page[offset]=0&page[limit]=1", 
+    "last": "http://localhost:10200/v1/users?page[offset]=2&page[limit]=1", 
+    "next": "http://localhost:10200/v1/users?page[offset]=1&page[limit]=1", 
+    "self": "http://localhost:10200/v1/users?page[offset]=0&page[limit]=1"
+  }
+}
 ```
+## Relationship Methods
+
+### POST /users/\<id>/relationships/friends*
+
+Add an item to a relationship collection.
+
+****Note:** use POST for collections with MANY items, otherwise use PATCH*
 
 
-
-### DELETE /users/< id>/relationships/friends/< id>
-
-
-And of course, the inevitable end of steve and bills friendship.  Both bill and steve will still exist as users after this operation, but their relationship will be no more.
-
-URL: http://localhost:10200/users/billgates@apple.com/relationships/friends/stevewozniak@mictosoft.com
+URL: http://localhost:10200/users/ryan@gmail.com/relationships/friends
 
 Request:
 
 ```http
 Accept: application/vnd.api+json
+```
+
+```json
+{
+   "data": [
+      {
+         "type": "users",
+         "id": "max@gmail.com",
+         "meta": {
+            "met": "space camp"
+         }
+      }
+   ]
+}
+```
+Response:
+##### 204 NO CONTENT
+```http
+Content-Type: application/vnd.api+json; charset=utf-8 
+Content-Length: 0
+Date: Tue, 15 Sep 2015 04:31:28 GMT 
+```
+
+### PATCH /users/\<id>/relationships/mom
+
+This method does a total replace on a relationship.  It should therefore be used to create relationships with cardinality <= 1.  It can also be used to delete all relationships.
+
+
+URL: http://localhost:10200/v1/users/ryan@gmail.com/relationships/mom
+
+Request to create:
+```http
+Accept: application/vnd.api+json
+```
+
+```json
+{
+"data":{"type":"users", "id":"sarah@gmail.com"}
+}
+```
+
+Request to delete:
+```http
+Accept: application/vnd.api+json
+```
+```json
+{
+"data":null
+}
 ```
 
 Response:
@@ -376,6 +429,221 @@ Content-Type: application/vnd.api+json; charset=utf-8
 Content-Length: 0
 Date: Tue, 15 Sep 2015 04:31:28 GMT 
 ```
+
+### DELETE /users/\<id>/relationships/friends
+
+Use this method to delete certain relationships contained in the body.  Only the relationships in the body will be deleted.  This method is only for collections with cardinality > 1.
+
+URL: http://localhost:10200/v1/users/ryan@gmail.com/relationships/friends
+
+Request:
+```http
+Accept: application/vnd.api+json
+```
+
+```json
+{
+   "data": [
+      {
+         "type": "users",
+         "id": "max@gmail.com"
+      }
+   ]
+}
+```
+
+Response:
+##### 204 NO CONTENT
+```http
+Content-Type: application/vnd.api+json; charset=utf-8 
+Content-Length: 0
+Date: Tue, 15 Sep 2015 04:31:28 GMT
+```
+
+### PATCH /users/\<id>/relationships/friends
+
+On collections with cardinality > 1 use this method to delete all existing items in that collection.
+
+URL: http://localhost:10200/v1/users/ryan@gmail.com/relationships/friends
+
+Request:
+```http
+Accept: application/vnd.api+json
+```
+```json
+{
+"data": []
+}
+```
+
+Response:
+##### 204 NO CONTENT
+```http
+Content-Type: application/vnd.api+json; charset=utf-8 
+Content-Length: 0
+Date: Tue, 15 Sep 2015 04:31:28 GMT
+```
+
+### GET /users/\<id>/relationships/friends
+
+Fetch a relationship.
+
+URL: http://localhost:10200/v1/users/max@gmail.com/relationships/friends
+
+Request:
+```http
+Accept: application/vnd.api+json
+```
+
+```json
+{
+  "data": [
+    {
+      "id": "ben@gmail.com", 
+      "meta": {
+        "created": "Sun, 27 Sep 2015 18:16:47 GMT", 
+        "met": "space camp", 
+        "type": "friend", 
+        "updated": "Sun, 27 Sep 2015 18:16:47 GMT"
+      }, 
+      "type": "users"
+    }, 
+    {
+      "id": "erik@gmail.com", 
+      "meta": {
+        "created": "Sun, 27 Sep 2015 18:16:47 GMT", 
+        "met": "taco tuesday party", 
+        "type": "friend", 
+        "updated": "Sun, 27 Sep 2015 18:16:47 GMT"
+      }, 
+      "type": "users"
+    }, 
+    {
+      "id": "ryan@gmail.com", 
+      "meta": {
+        "created": "Sun, 27 Sep 2015 18:16:47 GMT", 
+        "met": "at atheist revival", 
+        "type": "friend", 
+        "updated": "Sun, 27 Sep 2015 18:16:47 GMT"
+      }, 
+      "type": "users"
+    }
+  ], 
+  "included": [
+    {
+      "attributes": {
+        "active": true, 
+        "created": "Sun, 27 Sep 2015 18:16:47 GMT", 
+        "email": "ben@gmail.com", 
+        "gender": "m", 
+        "id": "ben@gmail.com", 
+        "type": "users", 
+        "updated": "Sun, 27 Sep 2015 18:16:47 GMT"
+      }, 
+      "id": "ben@gmail.com", 
+      "relationships": {
+        "friends": {
+          "data": [
+            {
+              "id": "max@gmail.com", 
+              "type": "users"
+            }
+          ], 
+          "links": {
+            "related": "http://localhost:10200/v1/users/ben@gmail.com/friends", 
+            "self": "http://localhost:10200/v1/users/ben@gmail.com/relationships/friends"
+          }
+        }, 
+        "mom": {
+          "data": null, 
+          "links": {
+            "related": "http://localhost:10200/v1/users/ben@gmail.com/mom", 
+            "self": "http://localhost:10200/v1/users/ben@gmail.com/relationships/mom"
+          }
+        }
+      }, 
+      "type": "users"
+    }, 
+    {
+      "attributes": {
+        "active": true, 
+        "created": "Sun, 27 Sep 2015 18:16:47 GMT", 
+        "email": "erik@gmail.com", 
+        "gender": "m", 
+        "id": "erik@gmail.com", 
+        "type": "users", 
+        "updated": "Sun, 27 Sep 2015 18:16:47 GMT"
+      }, 
+      "id": "erik@gmail.com", 
+      "relationships": {
+        "friends": {
+          "data": [
+            {
+              "id": "max@gmail.com", 
+              "type": "users"
+            }
+          ], 
+          "links": {
+            "related": "http://localhost:10200/v1/users/erik@gmail.com/friends", 
+            "self": "http://localhost:10200/v1/users/erik@gmail.com/relationships/friends"
+          }
+        }, 
+        "mom": {
+          "data": null, 
+          "links": {
+            "related": "http://localhost:10200/v1/users/erik@gmail.com/mom", 
+            "self": "http://localhost:10200/v1/users/erik@gmail.com/relationships/mom"
+          }
+        }
+      }, 
+      "type": "users"
+    }, 
+    {
+      "attributes": {
+        "active": true, 
+        "created": "Sun, 27 Sep 2015 16:54:19 GMT", 
+        "email": "ryan@gmail.com", 
+        "gender": "m", 
+        "id": "ryan@gmail.com", 
+        "type": "users", 
+        "updated": "Sun, 27 Sep 2015 17:18:38 GMT"
+      }, 
+      "id": "ryan@gmail.com", 
+      "relationships": {
+        "friends": {
+          "data": [
+            {
+              "id": "max@gmail.com", 
+              "type": "users"
+            }
+          ], 
+          "links": {
+            "related": "http://localhost:10200/v1/users/ryan@gmail.com/friends", 
+            "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/friends"
+          }
+        }, 
+        "mom": {
+          "data": null, 
+          "links": {
+            "related": "http://localhost:10200/v1/users/ryan@gmail.com/mom", 
+            "self": "http://localhost:10200/v1/users/ryan@gmail.com/relationships/mom"
+          }
+        }
+      }, 
+      "type": "users"
+    }
+  ], 
+  "links": {
+    "first": "http://localhost:10200/v1/users/max@gmail.com/relationships/friends?page[offset]=0&page[limit]=20", 
+    "last": "http://localhost:10200/v1/users/max@gmail.com/relationships/friends?page[offset]=0&page[limit]=20", 
+    "related": "http://localhost:10200/v1/users/max@gmail.com/friends", 
+    "self": "http://localhost:10200/v1/users/max@gmail.com/relationships/friends?page[offset]=0&page[limit]=20"
+  }
+}
+```
+
+
+
 
 
 
