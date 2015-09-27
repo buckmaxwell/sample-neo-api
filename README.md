@@ -124,12 +124,12 @@ Accept: application/vnd.api+json
 ```
 ```json
 {
-   "data": {
-      "type": "users",
-      "attributes": {
-         "password": "muchHarderPasswordToGuess"
-      }
-   }
+  "data": {
+    "type": "users",
+    "attributes": {
+      "password": "muchHarderPasswordToGuess"
+    }
+  }
 }
 ```
 
