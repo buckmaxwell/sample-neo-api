@@ -1,5 +1,6 @@
 # Sample NeoAPI Project
 
+![alt](http://i.imgur.com/9oi1ZEe.png)
 
 This project is to give you an idea of how you can leverage [NeoAPI](https://github.com/buckmaxwell/neoapi) in your projects. 
 
